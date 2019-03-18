@@ -1,0 +1,10 @@
+<h1>Heya!</h1>
+
+<% if @ipfs_uuid %>
+  <p><%= @ipfs_uuid %></p>
+<% end %>
+
+<%= form_tag({action: :upload}, multipart: true) do %>
+  <%= file_field_tag 'picture' %>
+  <%= submit_tag %>
+<% end %>
